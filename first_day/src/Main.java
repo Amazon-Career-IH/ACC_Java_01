@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Main {
 
 
@@ -49,10 +51,10 @@ public class Main {
 
         //Operadores más comunes
         System.out.println(5 + 10);
-        System.out.println(10-5);
-        System.out.println(10*5);
-        System.out.println(10/5);
-        System.out.println(10%5);
+        System.out.println(10 - 5);
+        System.out.println(10 * 5);
+        System.out.println(10 / 5);
+        System.out.println(10 % 5);
 
         myInt = 1;
         System.out.println("MY INT");
@@ -64,12 +66,11 @@ public class Main {
         myInt /= 7;
 
         int age = 17;
-        if(age >= 18) {
+        if (age >= 18) {
             System.out.println("Eres mayor de edad");
-        } else if(age > 16 && age < 18) {
+        } else if (age > 16 && age < 18) {
             System.out.println("Tienes 17 años");
-        }
-        else {
+        } else {
             System.out.println("Eres menor de edad");
         }
 
@@ -96,6 +97,55 @@ public class Main {
                 System.out.println("Weekend!");
                 break;
         }
+
+        System.out.println(myName.charAt(0));
+
+        char iniciales = myName.charAt(0);
+
+        System.out.println(myName.equals("jaume sánchez torres"));
+        System.out.println(myName.equalsIgnoreCase("jaume sánchez torres"));
+
+        String myNameInLowerCase = myName.toLowerCase();
+        System.out.println(myNameInLowerCase);
+
+        String myNameInUpperCase = myName.toUpperCase();
+        System.out.println(myNameInUpperCase);
+
+        System.out.println(myName.length());
+
+        String[] myStudents = {"Mario", "Carlos", "Pablo", "Lucas"};
+        System.out.println(Arrays.toString(myStudents));
+
+        System.out.println("==== BUCLE FOR  ====");
+
+        for (int i = 0; i < myStudents.length; i++) {
+            if (i % 2 == 0) {
+                System.out.println("El estudiante en la posición " + i + " es " + myStudents[i]);
+            }
+        }
+
+        System.out.println("=== BUCLE FOR EACH ===");
+
+        for (String name : myStudents) {
+            System.out.println(name);
+        }
+
+        System.out.println("=== BUCLE WHILE ===");
+        int i = 10;
+        while (i < myStudents.length) {
+            System.out.println(myStudents[i]);
+            i++;
+        }
+
+        System.out.println("=== BUCLE DO WHILE===");
+
+        i = 0;
+        do {
+            System.out.println(Arrays.toString(myStudents));
+            i++;
+
+        } while (i < myStudents.length);
+
 
     }
 
