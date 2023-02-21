@@ -69,6 +69,18 @@ public class Main {
 
         System.out.println(Car.getCounter());
 
+        Mamifero perro = new Mamifero("Toby", 10, "Masculino", false, 4);
+
+        Animal generico = new Animal("Pepe", 20, "Femenino");
+
+        System.out.println(perro.getName());
+
+        Animal[] misAnimales = new Animal[2];
+        misAnimales[0] = perro;
+        misAnimales[1] = generico;
+
+
+
 
 
 
