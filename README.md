@@ -2,6 +2,12 @@
 
 
 
+
+
+## Enlace de zoom
+
+https://ironhack.zoom.us/j/97541290728
+
 ## Class Recordings
 
 | Date       | Topic                                           | Link                                                         |
