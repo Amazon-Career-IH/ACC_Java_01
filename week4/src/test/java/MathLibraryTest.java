@@ -52,12 +52,26 @@ public class MathLibraryTest {
 
     }
 
-    @Test void shouldSumLargestIntegerPlusOne() {
+    @Test
+    void shouldSumLargestIntegerPlusOne() {
         int maxValue = 2147483647;
         int one = 1;
         //Resultado debería ser: 2147483648
 
         assertEquals(2147483648l, MathLibrary.sum(maxValue, 1));
+
+    }
+
+    @Test
+    void shouldTwoNumbersMultiply() {
+        assertEquals(10, MathLibrary.multiply(2, 5));
+    }
+
+    @Test
+    @DisplayName("Throws an exception when numbers are too large")
+    void shouldThrowAnException_WhenNumbersAreTooLarge() {
+
+        Assertions.assertThrows(ArithmeticException.class, () -> MathLibrary.multiply(Integer.MAX_VALUE, Integer.MAX_VALUE));
 
     }
 

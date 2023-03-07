@@ -17,6 +17,11 @@ public class Main {
 
         Invoice invoice = new Invoice("ID-1010", 25, false, invoiceItems);
 
+
+
+
+        /*
+
         Gson gson = new Gson();
         String json = gson.toJson(invoice);
 
@@ -63,11 +68,7 @@ public class Main {
              input.nextLine();
             }
         }
-
-
-
-
-
+         */
 
     }
 }
