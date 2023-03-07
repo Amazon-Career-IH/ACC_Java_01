@@ -48,4 +48,26 @@ public class Invoice {
         this.invoiceItems = invoiceItems;
     }
 
+    @Override
+    public String toString() {
+        return "Invoice{" +
+                "id='" + id + '\'' +
+                ", total=" + total +
+                ", isPaid=" + isPaid +
+                ", invoiceItems=" + invoiceItems +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Invoice invoice = (Invoice) o;
+        return Double.compare(invoice.getTotal(), getTotal()) == 0 && isPaid() == invoice.isPaid() && Objects.equals(getId(), invoice.getId()) && Objects.equals(getInvoiceItems(), invoice.getInvoiceItems());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getTotal(), isPaid(), getInvoiceItems());
+    }
 }
