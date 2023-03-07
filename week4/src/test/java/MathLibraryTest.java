@@ -52,4 +52,13 @@ public class MathLibraryTest {
 
     }
 
+    @Test void shouldSumLargestIntegerPlusOne() {
+        int maxValue = 2147483647;
+        int one = 1;
+        //Resultado debería ser: 2147483648
+
+        assertEquals(2147483648l, MathLibrary.sum(maxValue, 1));
+
+    }
+
 }

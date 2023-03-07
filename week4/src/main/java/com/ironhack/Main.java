@@ -2,10 +2,11 @@ package com.ironhack;
 
 import com.google.gson.*;
 
+import java.io.*;
 import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
         System.out.println("Hello world!");
 
         System.out.println("Hello world!");
@@ -24,6 +25,49 @@ public class Main {
         System.out.println(invoiceFromJSON.getTotal());
 
         System.out.println(MathLibrary.sum(2, 4));
+
+        System.out.println(Integer.MAX_VALUE);
+
+        try {
+            System.out.println(MathLibrary.multiply(Integer.MAX_VALUE, Integer.MAX_VALUE));
+        } catch (ArithmeticException e) {
+            System.err.println("Número demasiado grandes para enteros");
+            System.out.println(MathLibrary.multiply((long)Integer.MAX_VALUE, (long) Integer.MAX_VALUE));
+        }
+
+        try {
+        FileReader reader = new FileReader("archivo.txt");
+
+        } catch (FileNotFoundException e) {
+            System.out.println("El archivo no existe");
+        }
+
+        String name = null;
+
+        try {
+            System.out.println(name.length());
+        } catch (NullPointerException e) {
+            System.out.println("No se ha podido leer el tamaño porque name es nulo");
+        }
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Introduce tu edad");
+
+        int age = -1;
+
+        while (age < 0) {
+        try {
+             age = input.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("Pásame números!!");
+             input.nextLine();
+            }
+        }
+
+
+
+
+
 
     }
 }
