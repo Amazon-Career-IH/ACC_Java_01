@@ -23,6 +23,7 @@ public class Main {
 
         System.out.println(invoiceFromJSON.getTotal());
 
+        System.out.println(MathLibrary.sum(2, 4));
 
     }
 }

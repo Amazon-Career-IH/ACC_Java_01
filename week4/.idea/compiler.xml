@@ -9,5 +9,8 @@
         <module name="week4_02" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="week4" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
