@@ -42,8 +42,16 @@ public class Main {
             intArrayList.add(i);
         }
 
+
         System.out.println(Arrays.toString(intArrayList.getNumbers()));
 
+
+        int[] arr = {4, 1, 3, 2, 5};
+
+
+        System.out.println(Arrays.toString(arr));
+
+        System.out.println(Arrays.toString(balancer(arr, 25)));
 
     }
 
@@ -53,6 +61,39 @@ public class Main {
 
     public static BigDecimal invertAndRound(BigDecimal number) {
         return number.setScale(1, RoundingMode.HALF_UP).negate();
+    }
+
+    public static int[] balancer(int[] numList, int sum) {
+        if (sum == sumOf(numList)) {
+            return numList;
+        }
+        while (sumOf(numList) < sum) {
+            numList[indexOfSmallest(numList)]++;
+        }
+        return numList;
+    }
+    // get sum of elements in an array
+    public static int sumOf(int[] arr) {
+        int sum = 0;
+        int i;
+        for (i = 0; i < arr.length; i++)
+            sum += arr[i];
+        return sum;
+    }
+    // get index of smallest element of array
+    public static int indexOfSmallest(int[] array){
+        // handle array length size 0
+        if (array.length == 0)
+            return -1;
+        int index = 0;
+        int min = Integer.MAX_VALUE;
+        for (int i = 0; i < array.length; i++){
+            if (array[i] < min){
+                min = array[i];
+                index = i;
+            }
+        }
+        return index;
     }
 
 }

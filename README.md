@@ -17,4 +17,5 @@ https://ironhack.zoom.us/j/97541290728
 | 21/02/2023 | Clases, git workflow y input/output             | https://ironhack.zoom.us/rec/share/VOVQy3XPRwFWR4LOstEZxmNocNwY1xgXYw3FdU9Pf1gHQtyvkYS9gvSEP0plNT1J.CKRs-BFdldFc2CeC |
 | 28/02/2023 | Interfaces y clases abstractas                  | https://ironhack.zoom.us/rec/share/yvpBozf8XkbX0ltuYwS-D4Zd7hDJzijK12hZWw6jlMGTniOwVcYGsbc7PlyTBuR4.0jxOcRqmDwVb4M-c |
 | 07/03/2023 | JSON, excepciones, testing                      | https://ironhack.zoom.us/rec/share/IwR85X6q7YLL7-UQiLf4KTh36ZHc2tYNGeG5D4Cv4cuNct6s-jt4kNDNYRh_Pg80.ETIGTxELqG1MXe3f |
+| 14/3/2023  | Enums, Hashmaps, Diagramas                      | https://ironhack.zoom.us/rec/share/Yvzy_c1NP-1Du7L9mFK050z2jFMoaYeyO_YKB8tRb05vY7XRd-OErm4dyL8MHW0W.TK4RDF6KhTnBqYD6 |
 

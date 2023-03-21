@@ -30,4 +30,20 @@ public abstract class Car {
     }
 
     public abstract String getInfo();
+
+    public void setVinNumber(String vinNumber) {
+        this.vinNumber = vinNumber;
+    }
+
+    public void setMake(String make) {
+        this.make = make;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setMileage(int mileage) {
+        this.mileage = mileage;
+    }
 }
