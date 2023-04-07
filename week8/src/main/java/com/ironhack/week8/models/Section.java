@@ -7,23 +7,25 @@ import jakarta.persistence.*;
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Section {
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
     private String id;
-    private String courseCode;
     private Integer roomNum;
     private Integer enrolled;
     private String instructor;
     private Integer capacity;
+    @ManyToOne
+    @JoinColumn(name = "course_id")
+    private Course course;
 
     public Section() {
     }
 
-    public Section(String courseCode, Integer roomNumber, Integer enrolled, String instructor, Integer capacity) {
-        this.courseCode = courseCode;
-        this.roomNum = roomNumber;
+    public Section(String id, Integer roomNum, Integer enrolled, String instructor, Integer capacity, Course course) {
+        this.id = id;
+        this.roomNum = roomNum;
         this.enrolled = enrolled;
         this.instructor = instructor;
         this.capacity = capacity;
+        this.course = course;
     }
 
     public String getId() {
@@ -34,12 +36,12 @@ public class Section {
         this.id = id;
     }
 
-    public String getCourseCode() {
-        return courseCode;
+    public Course getCourse() {
+        return course;
     }
 
-    public void setCourseCode(String courseCode) {
-        this.courseCode = courseCode;
+    public void setCourse(Course course) {
+        this.course = course;
     }
 
     public Integer getRoomNum() {

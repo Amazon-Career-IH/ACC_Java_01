@@ -7,8 +7,8 @@ public class MathSection extends Section{
 
     private Integer mathCredits;
 
-    public MathSection(String courseCode, Integer roomNumber, Integer enrolled, String instructor, Integer capacity, Integer mathCredits) {
-        super(courseCode, roomNumber, enrolled, instructor, capacity);
+    public MathSection(String id, Integer roomNum, Integer enrolled, String instructor, Integer capacity, Course course, Integer mathCredits) {
+        super(id, roomNum, enrolled, instructor, capacity, course);
         this.mathCredits = mathCredits;
     }
 

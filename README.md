@@ -20,4 +20,5 @@ https://ironhack.zoom.us/j/97541290728
 | 14/3/2023  | Enums, Hashmaps, Diagramas                      | https://ironhack.zoom.us/rec/share/Yvzy_c1NP-1Du7L9mFK050z2jFMoaYeyO_YKB8tRb05vY7XRd-OErm4dyL8MHW0W.TK4RDF6KhTnBqYD6 |
 | 21/3/2023  | MySQL                                           | https://ironhack.zoom.us/rec/share/ncGmIRnuMgbUrXBWkqAogwdWPLsmruY0VVEZbPmPh-6E1GW40az1_e8hgwuCHjJv.FyJRN9tSOkG7xgNJ |
 | 28/3/2023  | Intro to SpringBoot, JPA and JPQL               | https://ironhack.zoom.us/rec/share/6Lpjb9xHWXNOpAWc0680HQ08qz14opuhBTbprpBcu-52wupyMFY-kbuMkanKNmCD.Z_qUAcfBBL4ED1yt |
+| 04/04/2023 | Relaciones JPA                                  | https://ironhack.zoom.us/rec/share/MgOLN_T4Ys-olJ0uetQT_-OvrS2atahR5SqsATQKTJ-D185Dd-n-EeMff0J8CAyK.J8BDP80__SlTwKeM |
 

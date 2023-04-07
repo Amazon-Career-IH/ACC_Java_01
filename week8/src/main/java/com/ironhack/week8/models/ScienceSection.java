@@ -7,10 +7,10 @@ public class ScienceSection extends Section{
     private Integer scienceCredits;
     private Integer labRoomNum;
 
-    public ScienceSection(String courseCode, Integer roomNumber, Integer enrolled, String instructor, Integer capacity, Integer scienceCredits, Integer labRoomNumber) {
-        super(courseCode, roomNumber, enrolled, instructor, capacity);
+    public ScienceSection(String id, Integer roomNum, Integer enrolled, String instructor, Integer capacity, Course course, Integer scienceCredits, Integer labRoomNum) {
+        super(id, roomNum, enrolled, instructor, capacity, course);
         this.scienceCredits = scienceCredits;
-        this.labRoomNum = labRoomNumber;
+        this.labRoomNum = labRoomNum;
     }
 
     public ScienceSection() {
