@@ -1,22 +1,27 @@
 package com.ironhack.week9.models;
 
+import com.ironhack.week9.enums.*;
 import jakarta.persistence.*;
+
+import java.math.*;
 
 @Entity
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String productName;
-    private Double price;
-    private String department;
-    private Integer stock;
+    private String name;
+    private BigDecimal price;
+    @Enumerated(EnumType.STRING)
+    private Category category;
+    @Enumerated(EnumType.STRING)
+    private Department department;
 
-    public Product(String productName, Double price, String department, Integer stock) {
-        this.productName = productName;
+    public Product(String name, BigDecimal price, Category category, Department department) {
+        this.name = name;
         this.price = price;
+        this.category = category;
         this.department = department;
-        this.stock = stock;
     }
 
     public Product() {
@@ -30,35 +35,35 @@ public class Product {
         this.id = id;
     }
 
-    public String getProductName() {
-        return productName;
+    public String getName() {
+        return name;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public Double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
-    public String getDepartment() {
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public Department getDepartment() {
         return department;
     }
 
-    public void setDepartment(String department) {
+    public void setDepartment(Department department) {
         this.department = department;
-    }
-
-    public Integer getStock() {
-        return stock;
-    }
-
-    public void setStock(Integer stock) {
-        this.stock = stock;
     }
 }
