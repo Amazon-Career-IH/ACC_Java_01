@@ -3,6 +3,7 @@ package com.ironhack.week9.controllers;
 import com.ironhack.week9.enums.*;
 import com.ironhack.week9.models.*;
 import com.ironhack.week9.repositories.*;
+import com.ironhack.week9.services.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
@@ -11,11 +12,12 @@ import org.springframework.web.server.*;
 import java.math.*;
 import java.util.*;
 
+
 @RestController
 public class ProductController {
 
     @Autowired
-    ProductRepository productRepository;
+    ProductService productService;
 
     @RequestMapping(value = "/hola", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
@@ -26,49 +28,30 @@ public class ProductController {
     @GetMapping(value = "/mostrar-productos")
     @ResponseStatus(HttpStatus.OK)
     public List<Product> showAllProducts() {
-        return productRepository.findAll();
+        return productService.showAllProducts();
     }
 
     @GetMapping(value = "/mostrar-productos/{id}")
+    @ResponseStatus(HttpStatus.OK)
     public Product findById(@PathVariable Long id) {
-        if (productRepository.findById(id).isPresent()) {
-            return productRepository.findById(id).get();
-        } else {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
-        }
+        return productService.findById(id);
     }
 
     @GetMapping(value = "/mostrar-productos-filtrados")
     @ResponseStatus(HttpStatus.OK)
     public List<Product> showAllProducts(@RequestParam Optional<String> department, @RequestParam Optional<String> category) {
-
-        if (department.isPresent() && category.isPresent()) {
-            Department department1 = Department.valueOf(department.get().toUpperCase());
-            Category category1 = Category.valueOf(category.get().toUpperCase());
-            return productRepository.findByDepartmentAndCategory(department1, category1);
-
-        }
-
-        if (department.isPresent()) {
-            return productRepository.findByDepartment(Department.valueOf(department.get().toUpperCase()));
-        }
-
-        if (category.isPresent())
-            return productRepository.findByCategory(Category.valueOf(category.get().toUpperCase()));
-
-
-        return productRepository.findAll();
+        return productService.showAllProducts(department, category);
     }
 
     @GetMapping(value = "/mostrar-productos-filtrados/categoria/{category}")
     public List<Product> findByCategory(@PathVariable String category) {
-        return productRepository.findByCategory(Category.valueOf(category.toUpperCase()));
+        return productService.findByCategory(category);
     }
 
     @PostMapping(value = "/añadir-producto")
     @ResponseStatus(HttpStatus.CREATED)
     public Product addProduct(@RequestBody Product product) {
-        return productRepository.save(product);
+        return productService.addProduct(product);
 
     }
 
@@ -76,8 +59,7 @@ public class ProductController {
     public Product saveFromMemory() {
         Product product1 = new Product();
         product1.setName("Jaume");
-        return productRepository.save(product1);
+        return productService.addProduct(product1);
     }
-
 
 }
