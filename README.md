@@ -22,4 +22,5 @@ https://ironhack.zoom.us/j/97541290728
 | 28/3/2023  | Intro to SpringBoot, JPA and JPQL               | https://ironhack.zoom.us/rec/share/6Lpjb9xHWXNOpAWc0680HQ08qz14opuhBTbprpBcu-52wupyMFY-kbuMkanKNmCD.Z_qUAcfBBL4ED1yt |
 | 04/04/2023 | Relaciones JPA                                  | https://ironhack.zoom.us/rec/share/MgOLN_T4Ys-olJ0uetQT_-OvrS2atahR5SqsATQKTJ-D185Dd-n-EeMff0J8CAyK.J8BDP80__SlTwKeM |
 | 11/04/2023 | Controladores                                   | https://ironhack.zoom.us/rec/share/izGdqQMdEx_76BwaKaU6E7taxIpG-bpV7jPZgJPW1Uk7Pid6IBfiwIIzeLEZVz_c.-KyDRCi0RWX6pXTa |
+| 18/04/2023 | Put, patch, post, delete                        | https://ironhack.zoom.us/rec/share/4WNRsEszt9kELjSZDWQTQ7gJVw0CTWMCI-nld93XwPOkvy9EcWJF7221-ikdd2Bk.L77xdqxFhq8-pbgS |
 
