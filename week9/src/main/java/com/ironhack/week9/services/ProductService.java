@@ -1,6 +1,7 @@
 package com.ironhack.week9.services;
 
 import com.ironhack.week9.controllers.*;
+import com.ironhack.week9.dto.*;
 import com.ironhack.week9.enums.*;
 import com.ironhack.week9.models.*;
 import com.ironhack.week9.repositories.*;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.*;
 
+import java.math.*;
 import java.util.*;
 
 @Service
@@ -77,4 +79,25 @@ public class ProductService {
         return productRepository.save(product1);
     }
 
+    public Product updateProductOrCreate(Product product) {
+        if (productRepository.existsById(product.getId())) {
+            Product product1 = productRepository.findById(product.getId()).get();
+            product1.setName(product.getName());
+            return product1;
+        } else {
+            return productRepository.save(product);
+        }
+    }
+
+    public Product updateProduct(UpdatePriceDTO updatePriceDTO) {
+
+        Product product = productRepository.findById(updatePriceDTO.getId()).get();
+        product.setPrice(updatePriceDTO.getPrice());
+        return productRepository.save(product);
+
+    }
+
+    public void deleteProduct(Long id) {
+        productRepository.deleteById(id);
+    }
 }

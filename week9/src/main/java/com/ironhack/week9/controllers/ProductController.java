@@ -1,5 +1,6 @@
 package com.ironhack.week9.controllers;
 
+import com.ironhack.week9.dto.*;
 import com.ironhack.week9.enums.*;
 import com.ironhack.week9.models.*;
 import com.ironhack.week9.repositories.*;
@@ -54,12 +55,29 @@ public class ProductController {
         return productService.addProduct(product);
 
     }
+    @PutMapping(value = "/añadir-producto")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Product putProduct(@RequestBody Product product) {
+        return productService.updateProductOrCreate(product);
+
+    }
 
     @GetMapping(value = "save-from-memory")
     public Product saveFromMemory() {
         Product product1 = new Product();
         product1.setName("Jaume");
         return productService.addProduct(product1);
+    }
+
+    @PatchMapping(value = "/update-product")
+    public Product updateProduct(@RequestBody UpdatePriceDTO updatePriceDTO) {
+        return productService.updateProduct(updatePriceDTO);
+    }
+
+    @DeleteMapping(value = "/delete/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable Long id) {
+        productService.deleteProduct(id);
     }
 
 }
