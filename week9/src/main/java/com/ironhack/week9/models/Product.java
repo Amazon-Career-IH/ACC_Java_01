@@ -2,6 +2,7 @@ package com.ironhack.week9.models;
 
 import com.ironhack.week9.enums.*;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 
 import java.math.*;
 
@@ -10,8 +11,13 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotEmpty
     private String name;
+    @NotNull
+    @DecimalMin(value = "0.0", message = "Can't add products with a price lower than 0")
+    @DecimalMax(value = "1000.0", message = "Can't add products with a price higher than 1000")
     private BigDecimal price;
+    @NotNull
     @Enumerated(EnumType.STRING)
     private Category category;
     @Enumerated(EnumType.STRING)

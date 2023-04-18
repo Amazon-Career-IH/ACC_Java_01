@@ -8,6 +8,7 @@ import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.*;
 
+import java.math.*;
 import java.util.*;
 
 @RestController
@@ -52,7 +53,8 @@ public class ProductController {
             return productRepository.findByDepartment(Department.valueOf(department.get().toUpperCase()));
         }
 
-        if (category.isPresent()) return productRepository.findByCategory(Category.valueOf(category.get().toUpperCase()));
+        if (category.isPresent())
+            return productRepository.findByCategory(Category.valueOf(category.get().toUpperCase()));
 
 
         return productRepository.findAll();
@@ -62,5 +64,20 @@ public class ProductController {
     public List<Product> findByCategory(@PathVariable String category) {
         return productRepository.findByCategory(Category.valueOf(category.toUpperCase()));
     }
+
+    @PostMapping(value = "/añadir-producto")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Product addProduct(@RequestBody Product product) {
+        return productRepository.save(product);
+
+    }
+
+    @GetMapping(value = "save-from-memory")
+    public Product saveFromMemory() {
+        Product product1 = new Product();
+        product1.setName("Jaume");
+        return productRepository.save(product1);
+    }
+
 
 }
