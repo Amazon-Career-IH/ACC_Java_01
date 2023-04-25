@@ -30,19 +30,28 @@ public class ProductService {
     }
 
     public Product findById(Long id) {
+
+        return productRepository.findById(id).orElseThrow(()
+                -> new ResponseStatusException(HttpStatus.NOT_FOUND, "El producto con el id " + id + " no existe en la base de datos"));
+
+        /*
+        El código de arriba hace lo mismo que este código:
+
         if (productRepository.findById(id).isPresent()) {
             return productRepository.findById(id).get();
         } else {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "El producto con el id " + id +  " no existe en la base de datos");
         }
+         */
+
     }
 
-    public List<Product> showAllProducts( Optional<String> department,  Optional<String> category) {
+    public List<Product> showAllProducts(Optional<String> department, Optional<String> category) {
 
         return getProducts(department, category, productRepository);
     }
 
-    public  List<Product> getProducts(Optional<String> department, Optional<String> category, ProductRepository productRepository) {
+    public List<Product> getProducts(Optional<String> department, Optional<String> category, ProductRepository productRepository) {
         if (department.isPresent() && category.isPresent()) {
             Department department1 = Department.valueOf(department.get().toUpperCase());
             Category category1 = Category.valueOf(category.get().toUpperCase());
