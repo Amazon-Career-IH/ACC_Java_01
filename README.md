@@ -23,4 +23,5 @@ https://ironhack.zoom.us/j/97541290728
 | 04/04/2023 | Relaciones JPA                                  | https://ironhack.zoom.us/rec/share/MgOLN_T4Ys-olJ0uetQT_-OvrS2atahR5SqsATQKTJ-D185Dd-n-EeMff0J8CAyK.J8BDP80__SlTwKeM |
 | 11/04/2023 | Controladores                                   | https://ironhack.zoom.us/rec/share/izGdqQMdEx_76BwaKaU6E7taxIpG-bpV7jPZgJPW1Uk7Pid6IBfiwIIzeLEZVz_c.-KyDRCi0RWX6pXTa |
 | 18/04/2023 | Put, patch, post, delete                        | https://ironhack.zoom.us/rec/share/4WNRsEszt9kELjSZDWQTQ7gJVw0CTWMCI-nld93XwPOkvy9EcWJF7221-ikdd2Bk.L77xdqxFhq8-pbgS |
+| 25/04/2023 | Manejo de excepciones y tests                   | https://ironhack.zoom.us/rec/share/3Xis4PmvOC6E6o6fzk18lRBurg23DpZDaVqb7uTjzgLWgDWaYvmVok82DIoAxbYb.BeGqTvgTe5ZriP08 |
 
