@@ -24,4 +24,6 @@ https://ironhack.zoom.us/j/97541290728
 | 11/04/2023 | Controladores                                   | https://ironhack.zoom.us/rec/share/izGdqQMdEx_76BwaKaU6E7taxIpG-bpV7jPZgJPW1Uk7Pid6IBfiwIIzeLEZVz_c.-KyDRCi0RWX6pXTa |
 | 18/04/2023 | Put, patch, post, delete                        | https://ironhack.zoom.us/rec/share/4WNRsEszt9kELjSZDWQTQ7gJVw0CTWMCI-nld93XwPOkvy9EcWJF7221-ikdd2Bk.L77xdqxFhq8-pbgS |
 | 25/04/2023 | Manejo de excepciones y tests                   | https://ironhack.zoom.us/rec/share/3Xis4PmvOC6E6o6fzk18lRBurg23DpZDaVqb7uTjzgLWgDWaYvmVok82DIoAxbYb.BeGqTvgTe5ZriP08 |
+| 29/04/2023 | Repaso sábado                                   | https://ironhack.zoom.us/rec/share/Omh8u8tKsF9_A__9S1ClZc4T-88xFr4Jvj-QS2HUBXtZyCutXIbvUo_lGsa7-7Ky.5DH1y7J81aYCVomV |
+| 02/05/2023 | Spring security                                 | https://ironhack.zoom.us/rec/share/0R80mWIlUyRzhcdsvOG3LfH_rvdDVfpTxpk1IHrDupBu9c-AJqHG6yN3AvDdoIAQ.OF88fr3QJZREXaIL |
 
